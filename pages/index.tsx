@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Tela from './tela';
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1 className="text-xl text-lime-600">Teste</h1>
+        <Tela />
       </main>
     </div>
   );
