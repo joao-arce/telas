@@ -1,4 +1,12 @@
+import { useRouter } from 'next/router';
+
 const Tela = () => {
+  const router = useRouter();
+
+  const handleGo = (e: any) => {
+    e.preventDefault();
+    router.push('/todo');
+  };
   return (
     <div className="max-w-2xl mx-auto bg-white p-16">
       <form>
@@ -169,6 +177,13 @@ const Tela = () => {
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Submit
+        </button>
+        <button
+          type="button"
+          onClick={handleGo}
+          className="text-white bg-rose-700 hover:bg-rose-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Go to Todo
         </button>
       </form>
     </div>
