@@ -1,4 +1,4 @@
-export type Todo = {
+export type ITodo = {
   title: string;
   completed: string;
 };

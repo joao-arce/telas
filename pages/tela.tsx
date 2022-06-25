@@ -1,11 +1,14 @@
 import { useRouter } from 'next/router';
 
+// const Todo = ({ todos }: Props) =>
+
 const Tela = () => {
   const router = useRouter();
 
   const handleGo = (e: any) => {
     e.preventDefault();
-    router.push('/todo');
+    // router.push('/todo');
+    router.push('/pedido');
   };
   return (
     <div className="max-w-2xl mx-auto bg-white p-16">
