@@ -1,7 +1,7 @@
-import { Todo } from '../types/todo';
+import { ITodo } from '../types/todo';
 
 export const loadTodos = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos');
-  const data: Todo[] = await res.json();
+  const data: ITodo[] = await res.json();
   return data;
 };

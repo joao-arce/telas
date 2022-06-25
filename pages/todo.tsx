@@ -9,13 +9,15 @@ const Todo = ({ todos, addItem }: Props) => {
   let incomplete: ITodo[] = [];
   let complete: ITodo[] = [];
 
-  todos.forEach((element) => {
-    if (element.completed) {
-      complete.push({ title: element.title, completed: element.completed });
-    } else {
-      incomplete.push({ title: element.title, completed: element.completed });
-    }
-  });
+  // console.log('todos ', todos);
+
+  // todos.forEach((element) => {
+  //   if (element.completed) {
+  //     complete.push({ title: element.title, completed: element.completed });
+  //   } else {
+  //     incomplete.push({ title: element.title, completed: element.completed });
+  //   }
+  // });
 
   const handleAdd = (e: any, task: ITodo) => {
     e.preventDefault();
@@ -30,7 +32,7 @@ const Todo = ({ todos, addItem }: Props) => {
             <summary className="bg-orange-600 text-yellow-100 cursor-pointer hover:bg-orange-500 list-none px-4 py-2 font-semibold">
               Completed Task
             </summary>
-            {complete.map((task, index) => {
+            {todos?.map((task, index) => {
               return (
                 <div
                   key={index}

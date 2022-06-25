@@ -195,7 +195,7 @@ const ItemOrder = ({ tasks }: Props) => {
 
     <div className="max-w-2xl mx-auto bg-white p-4">
       <div>
-        {tasks.map((task, index) => (
+        {tasks?.map((task, index) => (
           <div
             key={index}
             className="grid grid-cols-4 justify-between items-center"
